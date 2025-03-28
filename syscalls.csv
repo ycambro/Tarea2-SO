@@ -1,0 +1,369 @@
+rax,Name,Manual,Entry point,Description
+0,read,read(2),sys_read,Read from a file descriptor.
+1,write,write(2),sys_write,Write to a file descriptor.
+2,open,open(2),sys_open,Open a file and return a file descriptor.
+3,close,close(2),sys_close,Close a file descriptor.
+4,stat,stat(2),sys_newstat,Get file status.
+5,fstat,fstat(2),sys_newfstat,Get file status from a file descriptor.
+6,lstat,lstat(2),sys_newlstat,Get file status, without following symbolic links.
+7,poll,poll(2),sys_poll,Wait for some events on a file descriptor.
+8,lseek,lseek(2),sys_lseek,Reposition file offset.
+9,mmap,mmap(2),sys_ksys_mmap_pgoff,Map files or devices into memory.
+10,mprotect,mprotect(2),sys_mprotect,Set protection on a region of memory.
+11,munmap,munmap(2),sys_munmap,Unmap files or devices from memory.
+12,brk,brk(2),sys_brk,Change data segment size.
+13,rt_sigaction,rt_sigaction(2),sys_rt_sigaction,Examine and change a signal action.
+14,rt_sigprocmask,rt_sigprocmask(2),sys_rt_sigprocmask,Examine and change blocked signals.
+15,rt_sigreturn,rt_sigreturn(2),sys_rt_sigreturn,Return from a signal handler.
+16,ioctl,ioctl(2),sys_ioctl,Control device.
+17,pread64,pread64(2),sys_pread64,Read from a file descriptor at a specified offset.
+18,pwrite64,pwrite64(2),sys_pwrite64,Write to a file descriptor at a specified offset.
+19,readv,readv(2),sys_readv,Read into multiple buffers.
+20,writev,writev(2),sys_writev,Write from multiple buffers.
+21,access,access(2),sys_access,Check user's permissions for a file.
+22,pipe,pipe(2),sys_pipe,Create a pipe.
+23,select,select(2),sys_select,Synchronous I/O multiplexing.
+24,sched_yield,sched_yield(2),sys_sched_yield,Yield the processor.
+25,mremap,mremap(2),sys_mremap,Remap a virtual memory address.
+26,msync,msync(2),sys_msync,Synchronize a file with a memory map.
+27,mincore,mincore(2),sys_mincore,Determine whether pages are resident in memory.
+28,madvise,madvise(2),sys_madvise,Give advice about use of memory.
+29,shmget,shmget(2),sys_shmget,Allocate shared memory segment.
+30,shmat,shmat(2),sys_shmat,Attach shared memory segment.
+31,shmctl,shmctl(2),sys_shmctl,Shared memory control.
+32,dup,dup(2),sys_dup,Duplicate a file descriptor.
+33,dup2,dup2(2),sys_dup2,Duplicate a file descriptor to a specified file descriptor.
+34,pause,pause(2),sys_pause,Wait for a signal.
+35,nanosleep,nanosleep(2),sys_nanosleep,High-resolution sleep.
+36,getitimer,getitimer(2),sys_getitimer,Get value of an interval timer.
+37,alarm,alarm(2),sys_alarm,Set a timer to deliver a signal.
+38,setitimer,setitimer(2),sys_setitimer,Set value of an interval timer.
+39,getpid,getpid(2),sys_getpid,Get process ID.
+40,sendfile,sendfile(2),sys_sendfile64,Transfer data between file descriptors.
+41,socket,socket(2),sys_socket,Create an endpoint for communication.
+42,connect,connect(2),sys_connect,Initiate a connection on a socket.
+43,accept,accept(2),sys_accept,Accept a connection on a socket.
+44,sendto,sendto(2),sys_sendto,Send a message on a socket.
+45,recvfrom,recvfrom(2),sys_recvfrom,Receive a message from a socket.
+46,sendmsg,sendmsg(2),sys_sendmsg,Send a message on a socket.
+47,recvmsg,recvmsg(2),sys_recvmsg,Receive a message from a socket.
+48,shutdown,shutdown(2),sys_shutdown,Shut down part of a full-duplex connection.
+49,bind,bind(2),sys_bind,Bind a name to a socket.
+50,listen,listen(2),sys_listen,Listen for connections on a socket.
+51,getsockname,getsockname(2),sys_getsockname,Get socket name.
+52,getpeername,getpeername(2),sys_getpeername,Get name of connected peer socket.
+53,socketpair,socketpair(2),sys_socketpair,Create a pair of connected sockets.
+54,setsockopt,setsockopt(2),sys_setsockopt,Set socket options.
+55,getsockopt,getsockopt(2),sys_getsockopt,Get socket options.
+56,clone,clone(2),sys_clone,Create a child process.
+57,fork,fork(2),sys_fork,Create a child process.
+58,vfork,vfork(2),sys_vfork,Create a child process and block parent.
+59,execve,execve(2),sys_execve,Execute a program.
+60,exit,exit(2),sys_exit,Terminate the calling process.
+61,wait4,wait4(2),sys_wait4,Wait for process to change state.
+62,kill,kill(2),sys_kill,Send a signal to a process.
+63,uname,uname(2),sys_newuname,Get system name.
+64,semget,semget(2),sys_semget,Get set of System V semaphores.
+65,semop,semop(2),sys_semop,System V semaphore operations.
+66,semctl,semctl(2),sys_semctl,System V semaphore control.
+67,shmdt,shmdt(2),sys_shmdt,Detach shared memory segment.
+68,msgget,msgget(2),sys_msgget,Get System V message queue.
+69,msgsnd,msgsnd(2),sys_msgsnd,Send message to System V message queue.
+70,msgrcv,msgrcv(2),sys_msgrcv,Receive message from System V message queue.
+71,msgctl,msgctl(2),sys_msgctl,System V message control.
+72,fcntl,fcntl(2),sys_fcntl,File control.
+73,flock,flock(2),sys_flock,Apply or remove an advisory lock on an open file.
+74,fsync,fsync(2),sys_fsync,Synchronize a file's in-core state with storage device.
+75,fdatasync,fdatasync(2),sys_fdatasync,Synchronize a file's data with storage device.
+76,truncate,truncate(2),sys_truncate,Truncate a file to a specified length.
+77,ftruncate,ftruncate(2),sys_ftruncate,Truncate a file to a specified length.
+78,getdents,getdents(2),sys_getdents,Get directory entries.
+79,getcwd,getcwd(2),sys_getcwd,Get current working directory.
+80,chdir,chdir(2),sys_chdir,Change current working directory.
+81,fchdir,fchdir(2),sys_fchdir,Change current working directory.
+82,rename,rename(2),sys_rename,Change the name or location of a file.
+83,mkdir,mkdir(2),sys_mkdir,Create a directory.
+84,rmdir,rmdir(2),sys_rmdir,Delete a directory.
+85,creat,creat(2),sys_creat,Create a file.
+86,link,link(2),sys_link,Make a new name for a file.
+87,unlink,unlink(2),sys_unlink,Delete a name and possibly the file it refers to.
+88,symlink,symlink(2),sys_symlink,Make a new name for a file.
+89,readlink,readlink(2),sys_readlink,Read value of a symbolic link.
+90,chmod,chmod(2),sys_chmod,Change file mode bits.
+91,fchmod,fchmod(2),sys_fchmod,Change file mode bits.
+92,chown,chown(2),sys_chown,Change ownership of a file.
+93,fchown,fchown(2),sys_fchown,Change ownership of a file.
+94,lchown,lchown(2),sys_lchown,Change ownership of a symbolic link.
+95,umask,umask(2),sys_umask,Set file creation mask.
+96,gettimeofday,gettimeofday(2),sys_gettimeofday,Get time of day.
+97,getrlimit,getrlimit(2),sys_getrlimit,Get resource limits.
+98,getrusage,getrusage(2),sys_getrusage,Get resource usage.
+99,sysinfo,sysinfo(2),sys_sysinfo,Get system information.
+100,times,times(2),sys_times,Get process times.
+101,ptrace,ptrace(2),sys_ptrace,Process trace.
+102,getuid,getuid(2),sys_getuid,Get user ID.
+103,syslog,syslog(2),sys_syslog,Read and/or clear kernel message ring buffer; set console_loglevel.
+104,getgid,getgid(2),sys_getgid,Get group ID.
+105,setuid,setuid(2),sys_setuid,Set user ID.
+106,setgid,setgid(2),sys_setgid,Set group ID.
+107,geteuid,geteuid(2),sys_geteuid,Get effective user ID.
+108,getegid,getegid(2),sys_getegid,Get effective group ID.
+109,setpgid,setpgid(2),sys_setpgid,Set process group ID.
+110,getppid,getppid(2),sys_getppid,Get parent process ID.
+111,getpgrp,getpgrp(2),sys_getpgrp,Get process group.
+112,setsid,setsid(2),sys_setsid,Create session and set process group ID.
+113,setreuid,setreuid(2),sys_setreuid,Set real and effective user IDs.
+114,setregid,setregid(2),sys_setregid,Set real and effective group IDs.
+115,getgroups,getgroups(2),sys_getgroups,Get supplementary group IDs.
+116,setgroups,setgroups(2),sys_setgroups,Set supplementary group IDs.
+117,setresuid,setresuid(2),sys_setresuid,Set real, effective, and saved set-user-ID.
+118,getresuid,getresuid(2),sys_getresuid,Get real, effective, and saved set-user-ID.
+119,setresgid,setresgid(2),sys_setresgid,Set real, effective, and saved set-group-ID.
+120,getresgid,getresgid(2),sys_getresgid,Get real, effective, and saved set-group-ID.
+121,getpgid,getpgid(2),sys_getpgid,Get process group ID.
+122,setfsuid,setfsuid(2),sys_setfsuid,Set file system user ID.
+123,setfsgid,setfsgid(2),sys_setfsgid,Set file system group ID.
+124,getsid,getsid(2),sys_getsid,Get session ID.
+125,capget,capget(2),sys_capget,Get process capabilities.
+126,capset,capset(2),sys_capset,Set process capabilities.
+127,rt_sigpending,rt_sigpending(2),sys_rt_sigpending,Examine pending signals.
+128,rt_sigtimedwait,rt_sigtimedwait(2),sys_rt_sigtimedwait,Wait for a signal.
+129,rt_sigqueueinfo,rt_sigqueueinfo(2),sys_rt_sigqueueinfo,Send a signal in real time.
+130,rt_sigsuspend,rt_sigsuspend(2),sys_rt_sigsuspend,Wait for a signal.
+131,sigaltstack,sigaltstack(2),sys_sigaltstack,Set and/or get signal stack.
+132,utime,utime(2),sys_utime,Set file access and modification times.
+133,mknod,mknod(2),sys_mknod,Create a special or ordinary file.
+134,uselib,uselib(2), ,Select a library to use. (Obsolete)
+135,personality,personality(2),sys_personality,Set the process's execution domain.
+136,ustat,ustat(2),sys_ustat,Get file system statistics.
+137,statfs,statfs(2),sys_statfs,Get file system statistics.
+138,fstatfs,fstatfs(2),sys_fstatfs,Get file system statistics.
+139,sysfs,sysfs(2),sys_sysfs,Get file system type information.
+140,getpriority,getpriority(2),sys_getpriority,Get program scheduling priority.
+141,setpriority,setpriority(2),sys_setpriority,Set program scheduling priority.
+142,sched_setparam,sched_setparam(2),sys_sched_setparam,Set scheduling parameters.
+143,sched_getparam,sched_getparam(2),sys_sched_getparam,Get scheduling parameters.
+144,sched_setscheduler,sched_setscheduler(2),sys_sched_setscheduler,Set scheduling policy and parameters.
+145,sched_getscheduler,sched_getscheduler(2),sys_sched_getscheduler,Get scheduling policy.
+146,sched_get_priority_max,sched_get_priority_max(2),sys_sched_get_priority_max,Get maximum scheduling priority.
+147,sched_get_priority_min,sched_get_priority_min(2),sys_sched_get_priority_min,Get minimum scheduling priority.
+148,sched_rr_get_interval,sched_rr_get_interval(2),sys_sched_rr_get_interval,Get round-robin time quantum.
+149,mlock,mlock(2),sys_mlock,Lock memory pages.
+150,munlock,munlock(2),sys_munlock,Unlock memory pages.
+151,mlockall,mlockall(2),sys_mlockall,Lock all memory pages.
+152,munlockall,munlockall(2),sys_munlockall,Unlock all memory pages.
+153,vhangup,vhangup(2),sys_vhangup,Virtually hang up the current tty.
+154,modify_ldt,modify_ldt(2),sys_modify_ldt,Get or set process's LDT.
+155,pivot_root,pivot_root(2),sys_pivot_root,Change root directory.
+156,_sysctl,_sysctl(2),sys_ni_syscall,Read/write system parameters. (Obsolete)
+157,prctl,prctl(2),sys_prctl,Process control.
+158,arch_prctl,arch_prctl(2),sys_arch_prctl,Set architecture-specific process state.
+159,adjtimex,adjtimex(2),sys_adjtimex,Tune kernel clock.
+160,setrlimit,setrlimit(2),sys_setrlimit,Set resource limits.
+161,chroot,chroot(2),sys_chroot,Change root directory.
+162,sync,sync(2),sys_sync,Commit buffer cache to disk.
+163,acct,acct(2),sys_acct,Switch process accounting on or off.
+164,settimeofday,settimeofday(2),sys_settimeofday,Set time of day.
+165,mount,mount(2),sys_mount,Mount file system.
+166,umount2,umount2(2),sys_umount,Unmount file system.
+167,swapon,swapon(2),sys_swapon,Start swapping to file/device.
+168,swapoff,swapoff(2),sys_swapoff,Stop swapping to file/device.
+169,reboot,reboot(2),sys_reboot,Reboot system.
+170,sethostname,sethostname(2),sys_sethostname,Set hostname.
+171,setdomainname,setdomainname(2),sys_setdomainname,Set NIS domain name.
+172,iopl,iopl(2),sys_iopl,Change I/O privilege level.
+173,ioperm,ioperm(2),sys_ioperm,Set port I/O permissions.
+174,create_module,create_module(2), ,Create a loadable module entry. (Obsolete)
+175,init_module,init_module(2),sys_init_module,Initialize a loadable module.
+176,delete_module,delete_module(2),sys_delete_module,Remove a loadable module.
+177,get_kernel_syms,get_kernel_syms(2), ,Get exported kernel symbols. (Obsolete)
+178,query_module,query_module(2), ,Query loadable module information. (Obsolete)
+179,quotactl,quotactl(2),sys_quotactl,Manipulate disk quotas.
+180,nfsservctl,nfsservctl(2), ,NFS server control. (Obsolete)
+181,getpmsg,getpmsg(2), ,Get a message. (Obsolete)
+182,putpmsg,putpmsg(2), ,Put a message. (Obsolete)
+183,afs_syscall,afs_syscall(2), ,AFS file system syscall. (Obsolete)
+184,tuxcall,tuxcall(2), ,TUX file system syscall. (Obsolete)
+185,security,security(2), ,Security syscall. (Obsolete)
+186,gettid,gettid(2),sys_gettid,Get thread ID.
+187,readahead,readahead(2),sys_readahead,Initiate file readahead.
+188,setxattr,setxattr(2),sys_setxattr,Set extended attribute value.
+189,lsetxattr,lsetxattr(2),sys_lsetxattr,Set extended attribute value.
+190,fsetxattr,fsetxattr(2),sys_fsetxattr,Set extended attribute value.
+191,getxattr,getxattr(2),sys_getxattr,Get extended attribute value.
+192,lgetxattr,lgetxattr(2),sys_lgetxattr,Get extended attribute value.
+193,fgetxattr,fgetxattr(2),sys_fgetxattr,Get extended attribute value.
+194,listxattr,listxattr(2),sys_listxattr,List extended attribute names.
+195,llistxattr,llistxattr(2),sys_llistxattr,List extended attribute names.
+196,flistxattr,flistxattr(2),sys_flistxattr,List extended attribute names.
+197,removexattr,removexattr(2),sys_removexattr,Remove extended attribute.
+198,lremovexattr,lremovexattr(2),sys_lremovexattr,Remove extended attribute.
+199,fremovexattr,fremovexattr(2),sys_fremovexattr,Remove extended attribute.
+200,tkill,tkill(2),sys_tkill,Send signal to a thread.
+201,time,time(2),sys_time,Get time in seconds.
+202,futex,futex(2),sys_futex,Fast user-space locking.
+203,sched_setaffinity,sched_setaffinity(2),sys_sched_setaffinity,Set CPU affinity.
+204,sched_getaffinity,sched_getaffinity(2),sys_sched_getaffinity,Get CPU affinity.
+205,set_thread_area,set_thread_area(2), ,Set thread-local storage area. (Obsolete)
+206,io_setup,io_setup(2),sys_io_setup,Setup asynchronous I/O context.
+207,io_destroy,io_destroy(2),sys_io_destroy,Destroy asynchronous I/O context.
+208,io_getevents,io_getevents(2),sys_io_getevents,Get asynchronous I/O events.
+209,io_submit,io_submit(2),sys_io_submit,Submit asynchronous I/O requests.
+210,io_cancel,io_cancel(2),sys_io_cancel,Cancel asynchronous I/O requests.
+211,get_thread_area,get_thread_area(2), ,Get thread-local storage area. (Obsolete)
+212,lookup_dcookie,lookup_dcookie(2), ,Convert dcookie to pathname. (Obsolete)
+213,epoll_create,epoll_create(2),sys_epoll_create,Create an epoll instance.
+214,epoll_ctl_old,epoll_ctl_old(2), ,Control epoll instance. (Obsolete)
+215,epoll_wait_old,epoll_wait_old(2), ,Wait for epoll events. (Obsolete)
+216,remap_file_pages,remap_file_pages(2),sys_remap_file_pages,Remap file pages.
+217,getdents64,getdents64(2),sys_getdents64,Get directory entries.
+218,set_tid_address,set_tid_address(2),sys_set_tid_address,Set thread ID address.
+219,restart_syscall,restart_syscall(2),sys_restart_syscall,Restart system call.
+220,semtimedop,semtimedop(2),sys_semtimedop,System V semaphore operations.
+221,fadvise64,fadvise64(2),sys_fadvise64,Advise about file access patterns.
+222,timer_create,timer_create(2),sys_timer_create,Create a timer.
+223,timer_settime,timer_settime(2),sys_timer_settime,Set timer value.
+224,timer_gettime,timer_gettime(2),sys_timer_gettime,Get timer value.
+225,timer_getoverrun,timer_getoverrun(2),sys_timer_getoverrun,Get timer overrun count.
+226,timer_delete,timer_delete(2),sys_timer_delete,Delete a timer.
+227,clock_settime,clock_settime(2),sys_clock_settime,Set clock time.
+228,clock_gettime,clock_gettime(2),sys_clock_gettime,Get clock time.
+229,clock_getres,clock_getres(2),sys_clock_getres,Get clock resolution.
+230,clock_nanosleep,clock_nanosleep(2),sys_clock_nanosleep,High-resolution sleep.
+231,exit_group,exit_group(2),sys_exit_group,Terminate all threads in a process.
+232,epoll_wait,epoll_wait(2),sys_epoll_wait,Wait for epoll events.
+233,epoll_ctl,epoll_ctl(2),sys_epoll_ctl,Control epoll instance.
+234,tgkill,tgkill(2),sys_tgkill,Send signal to a thread group.
+235,utimes,utimes(2),sys_utimes,Set file access and modification times.
+236,vserver,vserver(2), ,Virtual server system call. (Obsolete)
+237,mbind,mbind(2),sys_mbind,Set memory policy.
+238,set_mempolicy,set_mempolicy(2),sys_set_mempolicy,Set memory policy.
+239,get_mempolicy,get_mempolicy(2),sys_get_mempolicy,Get memory policy.
+240,mq_open,mq_open(2),sys_mq_open,Open a message queue.
+241,mq_unlink,mq_unlink(2),sys_mq_unlink,Remove a message queue.
+242,mq_timedsend,mq_timedsend(2),sys_mq_timedsend,Send a message to a queue.
+243,mq_timedreceive,mq_timedreceive(2),sys_mq_timedreceive,Receive a message from a queue.
+244,mq_notify,mq_notify(2),sys_mq_notify,Register for message notification.
+245,mq_getsetattr,mq_getsetattr(2),sys_mq_getsetattr,Get/set message queue attributes.
+246,kexec_load,kexec_load(2),sys_kexec_load,Load a new kernel for later execution.
+247,waitid,waitid(2),sys_waitid,Wait for process to change state.
+248,add_key,add_key(2),sys_add_key,Add a key to the kernel keyring.
+249,request_key,request_key(2),sys_request_key,Request a key from the kernel keyring.
+250,keyctl,keyctl(2),sys_keyctl,Keyring control.
+251,ioprio_set,ioprio_set(2),sys_ioprio_set,Set I/O scheduling priority.
+252,ioprio_get,ioprio_get(2),sys_ioprio_get,Get I/O scheduling priority.
+253,inotify_init,inotify_init(2),sys_inotify_init,Initialize inotify instance.
+254,inotify_add_watch,inotify_add_watch(2),sys_inotify_add_watch,Add watch to inotify instance.
+255,inotify_rm_watch,inotify_rm_watch(2),sys_inotify_rm_watch,Remove watch from inotify instance.
+256,migrate_pages,migrate_pages(2),sys_migrate_pages,Move pages between nodes.
+257,openat,openat(2),sys_openat,Open a file relative to a directory file descriptor.
+258,mkdirat,mkdirat(2),sys_mkdirat,Create a directory relative to a directory file descriptor.
+259,mknodat,mknodat(2),sys_mknodat,Create a special or ordinary file relative to a directory file descriptor.
+260,fchownat,fchownat(2),sys_fchownat,Change ownership of a file relative to a directory file descriptor.
+261,futimesat,futimesat(2),sys_futimesat,Change file access and modification times relative to a directory file descriptor.
+262,newfstatat,newfstatat(2),sys_newfstatat,Get file status relative to a directory file descriptor.
+263,unlinkat,unlinkat(2),sys_unlinkat,Delete a name and possibly the file it refers to relative to a directory file descriptor.
+264,renameat,renameat(2),sys_renameat,Rename a file relative to a directory file descriptor.
+265,linkat,linkat(2),sys_linkat,Create a hard link relative to a directory file descriptor.
+266,symlinkat,symlinkat(2),sys_symlinkat,Create a symbolic link relative to a directory file descriptor.
+267,readlinkat,readlinkat(2),sys_readlinkat,Read value of a symbolic link relative to a directory file descriptor.
+268,fchmodat,fchmodat(2),sys_fchmodat,Change file mode bits relative to a directory file descriptor.
+269,faccessat,faccessat(2),sys_faccessat,Check user's permissions for a file relative to a directory file descriptor.
+270,pselect6,pselect6(2),sys_pselect6,Synchronous I/O multiplexing.
+271,ppoll,ppoll(2),sys_ppoll,Synchronous I/O multiplexing.
+272,unshare,unshare(2),sys_unshare,Unshare process execution context.
+273,set_robust_list,set_robust_list(2),sys_set_robust_list,Set robust futex list.
+274,get_robust_list,get_robust_list(2),sys_get_robust_list,Get robust futex list.
+275,splice,splice(2),sys_splice,Move data between pipes.
+276,tee,tee(2),sys_tee,Copy data between pipes.
+277,sync_file_range,sync_file_range(2),sys_sync_file_range,Synchronize a portion of a file's data with storage device.
+278,vmsplice,vmsplice(2),sys_vmsplice,Move data between pipes and user space memory.
+279,move_pages,move_pages(2),sys_move_pages,Move pages between nodes.
+280,utimensat,utimensat(2),sys_utimensat,Set file access and modification times relative to a directory file descriptor.
+281,epoll_pwait,epoll_pwait(2),sys_epoll_pwait,Wait for epoll events.
+282,signalfd,signalfd(2),sys_signalfd,Create a file descriptor for signal notification.
+283,timerfd_create,timerfd_create(2),sys_timerfd_create,Create a timer file descriptor.
+284,eventfd,eventfd(2),sys_eventfd,Create an event file descriptor.
+285,fallocate,fallocate(2),sys_fallocate,Preallocate or deallocate space to a file.
+286,timerfd_settime,timerfd_settime(2),sys_timerfd_settime,Set timer file descriptor value.
+287,timerfd_gettime,timerfd_gettime(2),sys_timerfd_gettime,Get timer file descriptor value.
+288,accept4,accept4(2),sys_accept4,Accept a connection on a socket.
+289,signalfd4,signalfd4(2),sys_signalfd4,Create a file descriptor for signal notification.
+290,eventfd2,eventfd2(2),sys_eventfd2,Create an event file descriptor.
+291,epoll_create1,epoll_create1(2),sys_epoll_create1,Create an epoll instance.
+292,dup3,dup3(2),sys_dup3,Duplicate a file descriptor.
+293,pipe2,pipe2(2),sys_pipe2,Create a pipe.
+294,inotify_init1,inotify_init1(2),sys_inotify_init1,Initialize inotify instance.
+295,preadv,preadv(2),sys_preadv,Read into multiple buffers at a specified offset.
+296,pwritev,pwritev(2),sys_pwritev,Write from multiple buffers at a specified offset.
+297,rt_tgsigqueueinfo,rt_tgsigqueueinfo(2),sys_rt_tgsigqueueinfo,Send a signal to a thread group.
+298,perf_event_open,perf_event_open(2),sys_perf_event_open,Open a performance monitoring event.
+299,recvmmsg,recvmmsg(2),sys_recvmmsg,Receive multiple messages on a socket.
+300,fanotify_init,fanotify_init(2),sys_fanotify_init,Initialize fanotify instance.
+301,fanotify_mark,fanotify_mark(2),sys_fanotify_mark,Add/remove fanotify marks.
+302,prlimit64,prlimit64(2),sys_prlimit64,Get/set process resource limits.
+303,name_to_handle_at,name_to_handle_at(2),sys_name_to_handle_at,Obtain a file handle.
+304,open_by_handle_at,open_by_handle_at(2),sys_open_by_handle_at,Open a file by file handle.
+305,clock_adjtime,clock_adjtime(2),sys_clock_adjtime,Adjust system time.
+306,syncfs,syncfs(2),sys_syncfs,Synchronize a file system.
+307,sendmmsg,sendmmsg(2),sys_sendmmsg,Send multiple messages on a socket.
+308,setns,setns(2),sys_setns,Set namespace.
+309,getcpu,getcpu(2),sys_getcpu,Get CPU and node currently running on.
+310,process_vm_readv,process_vm_readv(2),sys_process_vm_readv,Transfer data between process address spaces.
+311,process_vm_writev,process_vm_writev(2),sys_process_vm_writev,Transfer data between process address spaces.
+312,kcmp,kcmp(2),sys_kcmp,Compare two processes.
+313,finit_module,finit_module(2),sys_finit_module,Load a loadable module from a file descriptor.
+314,sched_setattr,sched_setattr(2),sys_sched_setattr,Set scheduling policy and attributes.
+315,sched_getattr,sched_getattr(2),sys_sched_getattr,Get scheduling policy and attributes.
+316,renameat2,renameat2(2),sys_renameat2,Rename a file relative to a directory file descriptor.
+317,seccomp,seccomp(2),sys_seccomp,Set secure computing mode.
+318,getrandom,getrandom(2),sys_getrandom,Get random bytes.
+319,memfd_create,memfd_create(2),sys_memfd_create,Create an anonymous file in memory.
+320,kexec_file_load,kexec_file_load(2),sys_kexec_file_load,Load a new kernel for later execution.
+321,bpf,bpf(2),sys_bpf,Perform BPF system call.
+322,execveat,execveat(2),sys_execveat,Execute a program relative to a directory file descriptor.
+323,userfaultfd,userfaultfd(2),sys_userfaultfd,Create a userfaultfd object.
+324,membarrier,membarrier(2),sys_membarrier,Memory barrier operations.
+325,mlock2,mlock2(2),sys_mlock2,Lock memory pages with flags.
+326,copy_file_range,copy_file_range(2),sys_copy_file_range,Copy a range of data between file descriptors.
+327,preadv2,preadv2(2),sys_preadv2,Read into multiple buffers at a specified offset.
+328,pwritev2,pwritev2(2),sys_pwritev2,Write from multiple buffers at a specified offset.
+329,pkey_mprotect,pkey_mprotect(2),sys_pkey_mprotect,Set protection keys on a region of memory.
+330,pkey_alloc,pkey_alloc(2),sys_pkey_alloc,Allocate protection key.
+331,pkey_free,pkey_free(2),sys_pkey_free,Free protection key.
+332,statx,statx(2),sys_statx,Get file status.
+333,io_pgetevents,io_pgetevents(2),sys_io_pgetevents,Get asynchronous I/O events.
+334,rseq,rseq(2),sys_rseq,Restartable sequences.
+424,pidfd_send_signal,pidfd_send_signal(2),sys_pidfd_send_signal,Send a signal to a process identified by a file descriptor.
+425,io_uring_setup,io_uring_setup(2),sys_io_uring_setup,Setup an io_uring instance.
+426,io_uring_enter,io_uring_enter(2),sys_io_uring_enter,Enter the io_uring submission queue.
+427,io_uring_register,io_uring_register(2),sys_io_uring_register,Register files or buffers for io_uring operations.
+428,open_tree,open_tree(2),sys_open_tree,Open a file system tree.
+429,move_mount,move_mount(2),sys_move_mount,Move a mount.
+430,fsopen,fsopen(2),sys_fsopen,Open a file system.
+431,fsconfig,fsconfig(2),sys_fsconfig,Configure a file system.
+432,fsmount,fsmount(2),sys_fsmount,Mount a file system.
+433,fspick,fspick(2),sys_fspick,Pick a file system.
+434,pidfd_open,pidfd_open(2),sys_pidfd_open,Obtain a file descriptor that refers to a process.
+435,clone3,clone3(2),sys_clone3,Create a child process.
+436,close_range,close_range(2),sys_close_range,Close a range of file descriptors.
+437,openat2,openat2(2),sys_openat2,Open a file relative to a directory file descriptor.
+438,pidfd_getfd,pidfd_getfd(2),sys_pidfd_getfd,Obtain a file descriptor that refers to a file.
+439,faccessat2,faccessat2(2),sys_faccessat2,Check user's permissions for a file relative to a directory file descriptor.
+440,process_madvise,process_madvise(2),sys_process_madvise,Give advice about use of process memory.
+441,epoll_pwait2,epoll_pwait2(2),sys_epoll_pwait2,Wait for epoll events.
+442,mount_setattr,mount_setattr(2),sys_mount_setattr,Set mount attributes.
+443,quotactl_fd,quotactl_fd(2),sys_quotactl_fd,Manipulate disk quotas using a file descriptor.
+444,landlock_create_ruleset,landlock_create_ruleset(2),sys_landlock_create_ruleset,Create a Landlock ruleset.
+445,landlock_add_rule,landlock_add_rule(2),sys_landlock_add_rule,Add a rule to a Landlock ruleset.
+446,landlock_restrict_self,landlock_restrict_self(2),sys_landlock_restrict_self,Restrict the calling process with a Landlock ruleset.
+447,memfd_secret,memfd_secret(2),sys_memfd_secret,Create a secret anonymous file in memory.
+448,process_mrelease,process_mrelease(2),sys_process_mrelease,Release process memory.
+449,futex_waitv,futex_waitv(2),sys_futex_waitv,Wait on multiple futexes.
+450,set_mempolicy_home_node,set_mempolicy_home_node(2),sys_set_mempolicy_home_node,Set memory policy home node.
+451,cachestat,cachestat(2),sys_cachestat,Get cache statistics.
+452,fchmodat2,fchmodat2(2),sys_fchmodat2,Change file mode bits relative to a directory file descriptor.
+453,map_shadow_stack,map_shadow_stack(2),sys_map_shadow_stack,Map a shadow stack.
+454,futex_wake,futex_wake(2),sys_futex_wake,Wake up threads waiting on a futex.
+455,futex_wait,futex_wait(2),sys_futex_wait,Wait on a futex.
+456,futex_requeue,futex_requeue(2),sys_futex_requeue,Requeue a futex.
