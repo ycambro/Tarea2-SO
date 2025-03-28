@@ -5,7 +5,7 @@ rax,Name,Manual,Entry point,Description
 3,close,close(2),sys_close,Close a file descriptor.
 4,stat,stat(2),sys_newstat,Get file status.
 5,fstat,fstat(2),sys_newfstat,Get file status from a file descriptor.
-6,lstat,lstat(2),sys_newlstat,Get file status, without following symbolic links.
+6,lstat,lstat(2),sys_newlstat,Get file status without following symbolic links.
 7,poll,poll(2),sys_poll,Wait for some events on a file descriptor.
 8,lseek,lseek(2),sys_lseek,Reposition file offset.
 9,mmap,mmap(2),sys_ksys_mmap_pgoff,Map files or devices into memory.
